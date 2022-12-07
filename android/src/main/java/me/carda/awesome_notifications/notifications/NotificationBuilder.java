@@ -71,7 +71,7 @@ public class NotificationBuilder {
             context,
             pushNotification.content.id,
             intent,
-            PendingIntent.FLAG_UPDATE_CURRENT
+            PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE
         );
 
         PendingIntent pendingDeleteIntent = PendingIntent.getBroadcast(
@@ -423,7 +423,7 @@ public class NotificationBuilder {
                             context,
                             pushNotification.content.id,
                             actionIntent,
-                            PendingIntent.FLAG_UPDATE_CURRENT
+                            PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE
                     );
 
                 }
@@ -433,7 +433,7 @@ public class NotificationBuilder {
                             context,
                             pushNotification.content.id,
                             actionIntent,
-                            PendingIntent.FLAG_UPDATE_CURRENT
+                            PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE
                     );
                 }
             }
